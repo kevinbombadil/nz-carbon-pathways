@@ -1,0 +1,24 @@
+:root { --nz-green:#0b6e4f; --nz-ink:#17302a; --nz-bg:#f4f7f5; }
+
+.stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:12px 16px; }
+.stat { background:#fff; border-radius:12px; padding:12px 14px; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+.stat-value { font-size:1.45rem; font-weight:700; color:var(--nz-green); line-height:1.15; }
+.stat-label { font-size:.78rem; color:#55706a; margin-top:2px; }
+.stat-sub   { font-size:.72rem; color:#8a9d98; margin-top:2px; }
+.stat.warn .stat-value { color:#b45309; }
+
+.hint { font-size:.82rem; color:#55706a; margin:4px 16px 12px; }
+
+.picker-card .item-title, .picker-card .item-inner { white-space:normal; }
+
+table.shiny-table, .table { width:100%; font-size:.85rem; }
+.table-wrap { overflow-x:auto; padding:0 12px 12px; }
+
+/* Desktop: centre the content and use two columns. */
+@media (min-width: 900px) {
+  .page-content { max-width:1240px; margin-left:auto; margin-right:auto; }
+  .split { display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; }
+  .split .sticky { position:sticky; top:8px; }
+  .plot-grid { display:grid; grid-template-columns:1fr 1fr; gap:0 16px; }
+  .plot-grid.single { grid-template-columns:1fr; }
+}

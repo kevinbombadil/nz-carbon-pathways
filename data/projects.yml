@@ -1,0 +1,72 @@
+# Government carbon-reduction projects.
+# Each project needs:
+#   cost_nzd_m            total cost, NZD millions
+#   implementation_years  years to roll out; benefits ramp up linearly over this period
+#   start_year            first year of implementation
+#   annual_reduction_kt   reduction at full effect, kt CO2e per year
+# The seed values below are ILLUSTRATIVE ESTIMATES for demonstration only.
+projects:
+- id: ev_incentive
+  name: EV purchase incentive
+  sector: Transport
+  description: Revived clean-car rebate with a charging-network top-up.
+  cost_nzd_m: 1200.0
+  implementation_years: 5
+  start_year: 2027
+  annual_reduction_kt: 600.0
+- id: public_transport
+  name: Urban rapid transit and rail
+  sector: Transport
+  description: Light rail, busways and frequency upgrades in the main centres.
+  cost_nzd_m: 6000.0
+  implementation_years: 10
+  start_year: 2027
+  annual_reduction_kt: 450.0
+- id: freight_shift
+  name: Freight shift to rail and coastal shipping
+  sector: Transport
+  description: Rail upgrades and coastal-shipping incentives to move freight off roads.
+  cost_nzd_m: 1500.0
+  implementation_years: 7
+  start_year: 2028
+  annual_reduction_kt: 350.0
+- id: renewables_build
+  name: Accelerated renewable electricity build
+  sector: Energy
+  description: Wind, solar and geothermal build-out to displace gas peaking.
+  cost_nzd_m: 7000.0
+  implementation_years: 8
+  start_year: 2027
+  annual_reduction_kt: 1500.0
+- id: process_heat
+  name: Industrial process-heat conversion
+  sector: Energy
+  description: Co-funding to replace coal and gas boilers with electric or biomass heat.
+  cost_nzd_m: 600.0
+  implementation_years: 6
+  start_year: 2027
+  annual_reduction_kt: 1500.0
+- id: building_retrofit
+  name: Building efficiency and heat-pump retrofit
+  sector: Energy
+  description: Subsidised insulation and heat pumps for homes and commercial buildings.
+  cost_nzd_m: 2500.0
+  implementation_years: 10
+  start_year: 2027
+  annual_reduction_kt: 500.0
+- id: methane_inhibitors
+  name: Livestock methane inhibitors
+  sector: Agriculture
+  description: Rollout of feed additives and methane-reducing technology on farms.
+  cost_nzd_m: 800.0
+  implementation_years: 5
+  start_year: 2028
+  annual_reduction_kt: 2000.0
+- id: landfill_gas
+  name: Landfill gas capture
+  sector: Waste
+  description: Gas capture and flaring or energy use at the largest landfills.
+  cost_nzd_m: 150.0
+  implementation_years: 3
+  start_year: 2027
+  annual_reduction_kt: 600.0

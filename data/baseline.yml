@@ -1,0 +1,24 @@
+# National baseline for New Zealand (gross greenhouse-gas emissions, MtCO2e).
+# ILLUSTRATIVE, rounded figures modelled on the shape of the MfE national
+# inventory (agriculture ~half, transport and stationary energy next).
+# Replace with the latest numbers from the Ministry for the Environment
+# "New Zealand's Greenhouse Gas Inventory" before relying on any output.
+base_year: 2022
+unit: MtCO2e
+note: >
+  Gross emissions only. Forestry removals, the ETS and biogenic-methane
+  targets are not modelled. Figures are rounded placeholders, so verify
+  them against the MfE inventory.
+bau_decline_pct_per_year: 0.5   # default business-as-usual decline, editable in the app
+sectors:
+  Agriculture: 41.0
+  Transport: 13.8
+  Energy: 15.5        # electricity, process heat and buildings (excl. transport)
+  Industry: 4.6       # industrial processes and product use
+  Waste: 3.5
+# Indicative gross-emissions waypoints the pathway chart compares against.
+# These are PLACEHOLDERS: set them to whichever benchmark you want to test against.
+targets:
+  - {year: 2030, gross_mt: 62.0}
+  - {year: 2035, gross_mt: 52.0}
+  - {year: 2050, gross_mt: 35.0}
