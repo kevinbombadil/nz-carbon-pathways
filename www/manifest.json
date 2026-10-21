@@ -1,8 +1,8 @@
 {
     "name": "NZ Carbon Pathways",
     "r": {
-	"version": "4.6.0",
-    }
+	"version": "4.6.0"
+    },
     "short_name": "NZ Carbon",
     "description": "Evaluate government projects to lower New Zealand's carbon emissions.",
     "start_url": ".",
