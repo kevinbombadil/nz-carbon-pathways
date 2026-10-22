@@ -71,10 +71,10 @@ ui <- f7Page(
           div(
             f7Card(
               title = "Choose projects to fund", class = "picker-card",
-              f7Row(
-                f7Col(f7Button("sel_all",  "Select all",  size = "small")),
-                f7Col(f7Button("sel_none", "Clear",       size = "small"))
-              ),
+#              f7Row(
+#                f7Col(f7Button("sel_all",  "Select all",  size = "small")),
+#                f7Col(f7Button("sel_none", "Clear",       size = "small"))
+#              ),
               uiOutput("project_picker")
             )
           )
@@ -164,12 +164,13 @@ server <- function(input, output, session) {
   output$project_picker <- renderUI({
     picker_nonce()
     df  <- projects_rv()
-    sel <- isolate(selected_rv())
+#    sel <- isolate(selected_rv())
     if (nrow(df) == 0) return(div(class = "hint", "No projects yet. Add one on the Add tab."))
     labels <- sprintf("%s · %s · %d yr · %s kt/yr",
                       df$name, vapply(df$cost_nzd_m, fmt_nzd, ""),
                       df$implementation_years, format(df$annual_reduction_kt, big.mark = ",", trim = TRUE))
-    f7CheckboxGroup("selected", "Projects", choices = stats::setNames(df$id, labels), selected = sel)
+    f7CheckboxGroup("selected", "Projects", choices = stats::setNames(df$id, labels))
+#        f7CheckboxGroup("selected", "Projects", choices = stats::setNames(df$id, labels), selected = sel)
   })
 
   observeEvent(input$selected, selected_rv(input$selected), ignoreNULL = FALSE, ignoreInit = TRUE)
